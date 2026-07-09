@@ -1,0 +1,62 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  widget:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: widget
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 20, cache: npm, cache-dependency-path: widget/package-lock.json }
+      - run: npm ci
+      - run: npm run typecheck
+      - run: npm run build
+      - name: Enforce 15KB gzip budget
+        run: |
+          SIZE=$(gzip -c dist/widget.js | wc -c)
+          echo "gzipped size: ${SIZE} bytes"
+          if [ "$SIZE" -gt 15360 ]; then
+            echo "::error::widget.js is ${SIZE} bytes gzipped, over the 15KB (15360 byte) budget"
+            exit 1
+          fi
+
+  zendesk:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: zendesk
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 20, cache: npm, cache-dependency-path: zendesk/package-lock.json }
+      - run: npm ci
+      - run: npm run typecheck
+      - run: npx vite build
+      - name: Enforce 200KB uncompressed budget
+        run: |
+          SIZE=$(du -sb assets | cut -f1)
+          echo "assets/ size: ${SIZE} bytes"
+          if [ "$SIZE" -gt 204800 ]; then
+            echo "::error::assets/ is ${SIZE} bytes, over the 200KB (204800 byte) budget"
+            exit 1
+          fi
+
+  freshdesk:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: freshdesk
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 20, cache: npm, cache-dependency-path: freshdesk/package-lock.json }
+      - run: npm ci
+      - run: npm run typecheck
+      - run: npx vite build

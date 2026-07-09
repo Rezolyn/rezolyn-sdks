@@ -1,0 +1,22 @@
+{
+  "api_key": {
+    "display_name": "LingoHQ API Key",
+    "description": "Your LingoHQ secret API key (Settings → API Keys in the LingoHQ dashboard).",
+    "type": "text",
+    "secure": true,
+    "required": true
+  },
+  "project_id": {
+    "display_name": "Project ID",
+    "description": "The LingoHQ project this Freshdesk instance sends conversations to.",
+    "type": "text",
+    "required": true
+  },
+  "api_url": {
+    "display_name": "API URL",
+    "description": "LingoHQ API base URL.",
+    "type": "text",
+    "default_value": "api.lingohq.io",
+    "required": false
+  }
+}

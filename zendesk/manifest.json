@@ -1,0 +1,43 @@
+{
+  "name": "LingoHQ",
+  "author": {
+    "name": "LingoHQ",
+    "email": "support@lingohq.io",
+    "url": "https://lingohq.io"
+  },
+  "defaultLocale": "en",
+  "version": "2.0",
+  "frameworkVersion": "2.0",
+  "signedUrls": true,
+  "location": {
+    "support": {
+      "ticket_sidebar": {
+        "url": "assets/index.html",
+        "flexible": true
+      }
+    }
+  },
+  "parameters": [
+    {
+      "name": "api_key",
+      "type": "text",
+      "required": true,
+      "secure": true,
+      "helpText": "Your LingoHQ secret API key (Settings → API Keys in the LingoHQ dashboard)."
+    },
+    {
+      "name": "project_id",
+      "type": "text",
+      "required": true,
+      "secure": false,
+      "helpText": "The LingoHQ project this Zendesk instance sends conversations to."
+    },
+    {
+      "name": "api_url",
+      "type": "text",
+      "required": false,
+      "secure": false,
+      "helpText": "LingoHQ API base URL. Defaults to https://api.lingohq.io."
+    }
+  ]
+}

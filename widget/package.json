@@ -1,0 +1,16 @@
+{
+  "name": "@lingohq/widget",
+  "version": "0.1.0",
+  "private": true,
+  "description": "LingoHQ web chat widget — vanilla TS, zero runtime dependencies, deploys to cdn.lingohq.io/widget.js",
+  "scripts": {
+    "build": "node build.mjs",
+    "dev": "node build.mjs --watch",
+    "size": "node build.mjs && gzip -c dist/widget.js | wc -c",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "esbuild": "^0.24.0",
+    "typescript": "^5"
+  }
+}

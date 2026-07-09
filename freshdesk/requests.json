@@ -1,0 +1,13 @@
+{
+  "processMessage": {
+    "schema": {
+      "method": "POST",
+      "host": "<%= iparam.api_url %>",
+      "path": "/v1/process",
+      "headers": {
+        "Content-Type": "application/json",
+        "Authorization": "Bearer <%= iparam.api_key %>"
+      }
+    }
+  }
+}
