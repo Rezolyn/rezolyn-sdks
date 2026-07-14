@@ -1,11 +1,11 @@
-# @lingohq/freshdesk
+# @rezolyn/freshdesk
 
 Ticket-sidebar app for Freshdesk (Freshworks FDK). Same feature set as `../zendesk/`, ported to the Freshworks SDK.
 
 ## Constraints (mirrors the Zendesk app)
 
 - The API key is a **secure iparam** (`config/iparams.json`, `"secure": true`) — never plain-text it, never read it into JS.
-- All calls to the LingoHQ API go through `client.request.invokeTemplate("processMessage", …)` (`src/lib/lingohq.ts`), which uses the request template in `requests.json` — the template's `Authorization: Bearer <%= iparam.api_key %>` header is filled in server-side by Freshworks, so the real key never reaches this iframe. **Never** raw `fetch()`.
+- All calls to the Rezolyn API go through `client.request.invokeTemplate("processMessage", …)` (`src/lib/rezolyn.ts`), which uses the request template in `requests.json` — the template's `Authorization: Bearer <%= iparam.api_key %>` header is filled in server-side by Freshworks, so the real key never reaches this iframe. **Never** raw `fetch()`.
 
 ## Development
 

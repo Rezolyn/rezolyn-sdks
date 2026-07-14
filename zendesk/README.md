@@ -1,4 +1,4 @@
-# @lingohq/zendesk
+# @rezolyn/zendesk
 
 Ticket-sidebar app for Zendesk Support (ZAF v2). React + TypeScript, built with Vite.
 
@@ -6,7 +6,7 @@ Ticket-sidebar app for Zendesk Support (ZAF v2). React + TypeScript, built with 
 
 - Total `assets/` output must stay **under 200KB uncompressed** — check `npm run build` output size, PurgeCSS aggressively if styling grows.
 - `manifest.json` sets `signedUrls: true`. The `api_key` app setting is `secure: true` — never plain-text it, never read it into JS.
-- All calls to the LingoHQ API go through `client.request({..., secure: true, headers: {Authorization: "Bearer {{setting.api_key}}"}})` in `src/lib/lingohq.ts` — **never** raw `fetch()`, which would expose the key in the iframe's network requests.
+- All calls to the Rezolyn API go through `client.request({..., secure: true, headers: {Authorization: "Bearer {{setting.api_key}}"}})` in `src/lib/rezolyn.ts` — **never** raw `fetch()`, which would expose the key in the iframe's network requests.
 
 ## Development
 

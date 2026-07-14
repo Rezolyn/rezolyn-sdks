@@ -1,5 +1,5 @@
 // Shared between zendesk/ and freshdesk/ — both call the same
-// POST /v1/process endpoint on lingohq-platform. See app/schemas/process.py.
+// POST /v1/process endpoint on rezolyn-platform. See app/schemas/process.py.
 export type ProcessResponse = {
   language: string;
   language_code: string;

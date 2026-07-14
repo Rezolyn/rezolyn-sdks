@@ -1,2 +1,2 @@
 // Injected by esbuild `define` at build time (see build.mjs).
-declare const __LINGOHQ_API_URL__: string;
+declare const __REZOLYN_API_URL__: string;

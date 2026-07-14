@@ -19,7 +19,7 @@ export async function sendMessage(
   });
 
   if (!res.ok) {
-    throw new Error(`LingoHQ widget: request failed (${res.status})`);
+    throw new Error(`Rezolyn widget: request failed (${res.status})`);
   }
   return res.json();
 }

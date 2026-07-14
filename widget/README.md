@@ -1,13 +1,13 @@
-# @lingohq/widget
+# @rezolyn/widget
 
-The embeddable web chat widget. Zero runtime dependencies — vanilla TypeScript, esbuild, Shadow DOM. Deploys to Cloudflare Pages as `cdn.lingohq.io/widget.js`.
+The embeddable web chat widget. Zero runtime dependencies — vanilla TypeScript, esbuild, Shadow DOM. Deploys to Cloudflare Pages as `cdn.rezolyn.com/widget.js`.
 
 ## Embed
 
 ```html
 <script
-  src="https://cdn.lingohq.io/widget.js"
-  data-key="ld_pub_..."
+  src="https://cdn.rezolyn.com/widget.js"
+  data-key="rz_pub_..."
   data-project="proj_..."
   defer
 ></script>

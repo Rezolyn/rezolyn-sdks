@@ -1,10 +1,10 @@
-# lingohq-integrations
+# rezolyn-integrations
 
-Three distribution surfaces for LingoHQ, each an independent deployable in its own subdirectory. All three talk to [lingohq-platform](https://github.com/lingohq/lingohq-platform)'s `POST /v1/process` and nothing else — no shared runtime, no shared package (beyond the type-only `shared/process-types.ts`).
+Three distribution surfaces for Rezolyn, each an independent deployable in its own subdirectory. All three talk to [rezolyn-platform](https://github.com/rezolyn/rezolyn-platform)'s `POST /v1/process` and nothing else — no shared runtime, no shared package (beyond the type-only `shared/process-types.ts`).
 
 | Directory | What it is | Stack | Deploys to |
 |---|---|---|---|
-| [`widget/`](widget/) | Embeddable web chat widget | Vanilla TypeScript, esbuild, zero deps | Cloudflare Pages → `cdn.lingohq.io/widget.js` |
+| [`widget/`](widget/) | Embeddable web chat widget | Vanilla TypeScript, esbuild, zero deps | Cloudflare Pages → `cdn.rezolyn.com/widget.js` |
 | [`zendesk/`](zendesk/) | Ticket-sidebar app | React + ZAF SDK v2, Vite | Zendesk Marketplace |
 | [`freshdesk/`](freshdesk/) | Ticket-sidebar app | React + Freshworks FDK, Vite | Freshworks Marketplace |
 
@@ -16,4 +16,4 @@ All three: real UI, real typed call into `/v1/process`, real build verified loca
 
 ## Shared types
 
-`shared/process-types.ts` — the `ProcessResponse` shape, hand-written against `lingohq-platform`'s `app/schemas/process.py`. `widget/` has its own copy (built and verified before this existed); `zendesk/` and `freshdesk/` import it directly via relative path.
+`shared/process-types.ts` — the `ProcessResponse` shape, hand-written against `rezolyn-platform`'s `app/schemas/process.py`. `widget/` has its own copy (built and verified before this existed); `zendesk/` and `freshdesk/` import it directly via relative path.

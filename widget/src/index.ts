@@ -10,13 +10,13 @@ function readConfig(script: HTMLScriptElement): WidgetConfig {
   const publishableKey = script.dataset.key;
   const projectId = script.dataset.project;
   if (!publishableKey || !projectId) {
-    throw new Error("LingoHQ widget: data-key and data-project are required on the script tag");
+    throw new Error("Rezolyn widget: data-key and data-project are required on the script tag");
   }
   return {
     publishableKey,
     projectId,
     // data-api-url overrides; otherwise the build-time default (VITE_API_URL).
-    apiUrl: script.dataset.apiUrl ?? __LINGOHQ_API_URL__,
+    apiUrl: script.dataset.apiUrl ?? __REZOLYN_API_URL__,
   };
 }
 

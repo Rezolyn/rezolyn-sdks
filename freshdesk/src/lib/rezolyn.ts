@@ -1,7 +1,7 @@
 import type { ProcessResponse } from "../../../shared/process-types";
 
 /**
- * Calls LingoHQ through the FDK's request.invokeTemplate — never raw
+ * Calls Rezolyn through the FDK's request.invokeTemplate — never raw
  * fetch(). The "processMessage" template (requests.json) has the
  * Authorization header pre-filled with the secure `api_key` iparam server
  * side; the real key never reaches this iframe's JS.

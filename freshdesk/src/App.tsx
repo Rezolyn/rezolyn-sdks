@@ -1,5 +1,5 @@
 import { useCallback, useRef, useState } from "react";
-import { processMessage } from "./lib/lingohq";
+import { processMessage } from "./lib/rezolyn";
 
 type Status = "idle" | "loading" | "error";
 

@@ -1,8 +1,8 @@
 {
-  "name": "@lingohq/freshdesk",
+  "name": "@rezolyn/freshdesk",
   "version": "0.1.0",
   "private": true,
-  "description": "LingoHQ Freshdesk ticket-sidebar app (FDK)",
+  "description": "Rezolyn Freshdesk ticket-sidebar app (FDK)",
   "scripts": {
     "dev": "vite",
     "build": "tsc --noEmit && vite build",

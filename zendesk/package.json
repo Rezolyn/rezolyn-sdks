@@ -1,13 +1,13 @@
 {
-  "name": "@lingohq/zendesk",
+  "name": "@rezolyn/zendesk",
   "version": "0.1.0",
   "private": true,
-  "description": "LingoHQ Zendesk ticket-sidebar app (ZAF v2)",
+  "description": "Rezolyn Zendesk ticket-sidebar app (ZAF v2)",
   "scripts": {
     "dev": "vite",
     "build": "tsc --noEmit && vite build",
     "typecheck": "tsc --noEmit",
-    "package": "npm run build && zip -r lingohq-zendesk.zip manifest.json assets"
+    "package": "npm run build && zip -r rezolyn-zendesk.zip manifest.json assets"
   },
   "dependencies": {
     "react": "^19.0.0",

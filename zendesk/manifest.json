@@ -1,9 +1,9 @@
 {
-  "name": "LingoHQ",
+  "name": "Rezolyn",
   "author": {
-    "name": "LingoHQ",
-    "email": "support@lingohq.io",
-    "url": "https://lingohq.io"
+    "name": "Rezolyn",
+    "email": "support@rezolyn.com",
+    "url": "https://rezolyn.com"
   },
   "defaultLocale": "en",
   "version": "2.0",
@@ -23,21 +23,21 @@
       "type": "text",
       "required": true,
       "secure": true,
-      "helpText": "Your LingoHQ secret API key (Settings → API Keys in the LingoHQ dashboard)."
+      "helpText": "Your Rezolyn secret API key (Settings → API Keys in the Rezolyn dashboard)."
     },
     {
       "name": "project_id",
       "type": "text",
       "required": true,
       "secure": false,
-      "helpText": "The LingoHQ project this Zendesk instance sends conversations to."
+      "helpText": "The Rezolyn project this Zendesk instance sends conversations to."
     },
     {
       "name": "api_url",
       "type": "text",
       "required": false,
       "secure": false,
-      "helpText": "LingoHQ API base URL. Defaults to https://api.lingohq.io."
+      "helpText": "Rezolyn API base URL. Defaults to https://api.rezolyn.com."
     }
   ]
 }

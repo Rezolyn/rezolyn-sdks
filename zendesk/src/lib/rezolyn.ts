@@ -1,7 +1,7 @@
 import type { ProcessResponse } from "../../../shared/process-types";
 
 /**
- * Calls LingoHQ through ZAF's client.request({secure: true}) — never raw
+ * Calls Rezolyn through ZAF's client.request({secure: true}) — never raw
  * fetch(). secure:true makes ZAF inject the api_key secure parameter
  * server-side; the key never appears in this iframe's network requests.
  */
@@ -11,7 +11,7 @@ export async function processMessage(
   text: string,
   sessionId: string,
 ): Promise<ProcessResponse> {
-  const apiUrl = settings.api_url || "https://api.lingohq.io";
+  const apiUrl = settings.api_url || "https://api.rezolyn.com";
   return client.request<ProcessResponse>({
     url: `${apiUrl}/v1/process`,
     type: "POST",
