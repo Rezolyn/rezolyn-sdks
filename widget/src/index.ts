@@ -15,7 +15,8 @@ function readConfig(script: HTMLScriptElement): WidgetConfig {
   return {
     publishableKey,
     projectId,
-    apiUrl: script.dataset.apiUrl ?? "https://api.lingohq.io",
+    // data-api-url overrides; otherwise the build-time default (VITE_API_URL).
+    apiUrl: script.dataset.apiUrl ?? __LINGOHQ_API_URL__,
   };
 }
 

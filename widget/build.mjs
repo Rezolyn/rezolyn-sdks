@@ -2,6 +2,12 @@ import { build, context } from "esbuild";
 
 const watch = process.argv.includes("--watch");
 
+// The widget is compiled and served from a CDN, so its default API URL is
+// baked in at build time from VITE_API_URL (falls back to production .io).
+// A page can still override per-embed with data-api-url. Move domains by
+// rebuilding with a different env, not by editing source.
+const apiUrl = process.env.VITE_API_URL ?? "https://api.lingohq.io";
+
 const options = {
   entryPoints: ["src/index.ts"],
   bundle: true,
@@ -10,6 +16,9 @@ const options = {
   format: "iife",
   outfile: "dist/widget.js",
   legalComments: "none",
+  define: {
+    __LINGOHQ_API_URL__: JSON.stringify(apiUrl),
+  },
 };
 
 if (watch) {
