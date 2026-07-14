@@ -7,3 +7,7 @@ freshdesk/dist/
 *.tsbuildinfo
 .DS_Store
 npm-debug.log*
+
+# local env (never commit)
+.env
+.env.local
