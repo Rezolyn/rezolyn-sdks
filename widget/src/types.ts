@@ -16,6 +16,9 @@ export type ProcessResponse = {
   suggestion_source: string;
   deflectable: boolean;
   deflection_requires: string[];
+  // Set when the project uses configurable skills (use-case-agnostic path).
+  action_type?: "answer" | "read" | "write" | "escalate" | null;
+  requires_confirmation?: boolean;
 };
 
 export type ChatMessage = {
